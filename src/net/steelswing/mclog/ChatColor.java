@@ -314,4 +314,28 @@ public final class ChatColor {
     public Color getColor() {
         return color;
     }
+
+    // TODO: FIX THIS GOVNOCODE
+    public static String clearColor(String str) {
+        // MINI PARSER
+        String out = "";
+        char[] chars = str.toCharArray();
+        int pos = 0;
+        while (pos < chars.length) {
+            char current = chars[pos];
+            try {
+                if (current == '&' || current == '§') {
+                    if (chars.length <= 2) {
+                        break;
+                    }
+                    current = chars[pos += 2];
+                }
+            } catch (Exception e) {
+            }
+            out += current;
+            pos++;
+        }
+
+        return out;
+    }
 }

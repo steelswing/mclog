@@ -41,6 +41,10 @@ public class TerminalConsoleWriterThread extends Thread {
             if (message == null) {
                 continue;
             }
+            
+            if(!ServerConsole.useJLine) {
+                message = ChatColor.clearColor(message);
+            }
 
             try {
                 if (ServerConsole.useJLine) {
