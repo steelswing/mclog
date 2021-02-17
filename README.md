@@ -27,7 +27,7 @@ public class TestConsole {
         AtomicInteger counter = new AtomicInteger(0);
         while (console.isRunning()) {
             if (counter.incrementAndGet() % 10 == 0) {
-                log.error("&c");
+                log.error("&cHello &aWorld!");
             }
 
             Thread.sleep(20);
