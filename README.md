@@ -42,4 +42,4 @@ rem test bat file.
 chcp 65001
 java -Dfile.encoding=UTF-8 -jar you_jar.jar
 ```
-![](preview.png)
+![](Screenshot_92.png)
