@@ -35,3 +35,11 @@ public class TestConsole {
     }
 }
 ```
+
+### Enable support for Russian characters (Windows)
+```bat
+rem test bat file.
+chcp 65001
+java -Dfile.encoding=UTF-8 -jar you_jar.jar
+```
+![](Screenshot_92.png)
